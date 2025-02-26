@@ -1,0 +1,24 @@
+name: Notify on PR
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    notify:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+
+        - name: notify-PRs
+          uses: debuide/notify-prs@v1.0
+          env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Check main branch
+          uses: debuide/check-base-branch-status
+          with:
+            base-branch: main
+            github-token: ${{ secrets.GITHUB_TOKEN }}
