@@ -18,6 +18,7 @@ jobs:
           uses: actions/checkout@v2
 
         - name: notify-PRs
+          if: github.ref == 'refs/heads/main'
           uses: debuide/notify-prs@v1.0
           env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
