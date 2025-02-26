@@ -21,7 +21,7 @@ jobs:
           if: github.ref == 'refs/heads/main'
           uses: debuide/notify-prs@v1.0
           env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Check main branch
           uses: debuide/check-base-branch-status@v1.1
