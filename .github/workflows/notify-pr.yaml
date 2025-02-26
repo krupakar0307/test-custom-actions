@@ -4,6 +4,11 @@ on:
     push:
         branches:
             - main
+    pull_request:
+        types:
+            - opened
+            - synchronize
+            - reopened
 jobs:
     notify:
         runs-on: ubuntu-latest
@@ -18,8 +23,8 @@ jobs:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Check main branch
-          uses: debuide/check-base-branch-status@v1.0
+          uses: debuide/check-base-branch-status@v1.1
           with:
-            main-branch: main
+            base-branch: main
             github-token: ${{ secrets.GITHUB_TOKEN }}
 
