@@ -9,7 +9,7 @@ on:
             - opened
             - synchronize
             - reopened
-            
+
 permissions:
   actions: write    # Required to trigger workflow runs
   contents: read    # Required to check out code
