@@ -25,7 +25,7 @@ jobs:
 
         - name: PRs-Refresh
           if: github.ref == 'refs/heads/main'
-          uses: debuide/pr-refresh@v1.0.0
+          uses: krupakar0307/action-pr-triggers@efbf26f7d3b717ec1a6047b02fc232296019d76d
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
