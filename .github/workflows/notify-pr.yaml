@@ -33,6 +33,6 @@ jobs:
           if: github.event_name == 'pull_request'
           uses: debuide/base-branch-status@v1.0.1
           with:
-            base-branch: master
+            base-branch: develop
             github-token: ${{ secrets.GITHUB_TOKEN }}
 
