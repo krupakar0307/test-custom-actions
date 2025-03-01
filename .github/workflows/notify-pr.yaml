@@ -31,7 +31,7 @@ jobs:
 
         - name: Check main branch
           if: github.event_name == 'pull_request'
-          uses: debuide/base-branch-status@0b3de98de6233b5d8123e6831370ed2fc3ee867c
+          uses: debuide/base-branch-status@v1.0.1
           with:
             base-branch: main
             github-token: ${{ secrets.GITHUB_TOKEN }}
