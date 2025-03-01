@@ -14,7 +14,7 @@ permissions:
   actions: write    # Required to trigger workflow runs
   contents: read    # Required to check out code
   pull-requests: read    # Required to read PR information
-  
+
 jobs:
     notify:
         runs-on: ubuntu-latest
@@ -29,10 +29,17 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        # - name: Check main branch
-        #   if: github.event_name == 'pull_request'
-        #   uses: debuide/base-branch-status@v1.0.1
-        #   with:
-        #     base-branch: main
-        #     github-token: ${{ secrets.GITHUB_TOKEN }}
+        - name: Check main branch
+          if: github.event_name == 'pull_request'
+          uses: debuide/base-branch-status@v1.0.0
+          with:
+            base-branch: main
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            
+        - name: Check main branch
+          if: github.event_name == 'pull_request'
+          uses: debuide/base-branch-status@v1.0.0
+          with:
+            base-branch: main
+            github-token: ${{ secrets.GITHUB_TOKEN }}
 
