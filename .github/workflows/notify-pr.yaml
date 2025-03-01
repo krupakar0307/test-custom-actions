@@ -23,11 +23,11 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v2
 
-        # - name: notify-PRs
-        #   if: github.ref == 'refs/heads/main'
-        #   uses: debuide/notify-prs@v1.0
-        #   env:
-        #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: notify-PRs
+          if: github.ref == 'refs/heads/main'
+          uses: debuide/pr-refresh@v1.0
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Check main branch
           if: github.event_name == 'pull_request'
