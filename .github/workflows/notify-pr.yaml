@@ -37,9 +37,8 @@ jobs:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             
         - name: Check main branch
-          if: github.event_name == 'pull_request'
-          uses: debuide/base-branch-status@v1.0.0
+          uses: krupakar0307/merge-checker@f407900a0dd4bdaf184315da8d2af26940b0d339
           with:
-            base-branch: main
+            silent: true
             github-token: ${{ secrets.GITHUB_TOKEN }}
 
