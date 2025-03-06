@@ -1,4 +1,4 @@
-name: Notify on PRs
+name: Notify on PR
 
 on:
     push:
