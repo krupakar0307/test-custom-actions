@@ -23,21 +23,21 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v2
 
-        - name: PRs-Refresh
-          if: github.ref == 'refs/heads/main'
-          uses: debuide/pr-refresh@v1.0.0
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # - name: PRs-Refresh
+        #   if: github.ref == 'refs/heads/main'
+        #   uses: debuide/pr-refresh@v1.0.0
+        #   env:
+        #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Check main branch
-          if: github.event_name == 'pull_request'
-          uses: debuide/base-branch-status@v1.0.0
-          with:
-            base-branch: main
-            github-token: ${{ secrets.GITHUB_TOKEN }}
+        # - name: Check main branch
+        #   if: github.event_name == 'pull_request'
+        #   uses: debuide/base-branch-status@v1.0.0
+        #   with:
+        #     base-branch: main
+        #     github-token: ${{ secrets.GITHUB_TOKEN }}
             
         - name: Check main branch
-          uses: krupakar0307/merge-checker@f407900a0dd4bdaf184315da8d2af26940b0d339
+          uses: krupakar0307/merge-checker@debf9e7958fc5c7e3e47ed9e7e50500d99918680
           with:
             silent: true
             github-token: ${{ secrets.GITHUB_TOKEN }}
