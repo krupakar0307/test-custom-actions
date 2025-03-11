@@ -43,7 +43,7 @@ jobs:
         #     github-token: ${{ secrets.GITHUB_TOKEN }}
             
         - name: Check main branch
-          uses: krupakar0307/merge-checker@d53f42fb102a47d45bb7875ece0d9a45f745d5ba
+          uses: debuide/merge-guard@cdf98484095f977fd070724ba3eb7c52fbcee85b
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # with:
