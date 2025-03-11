@@ -45,5 +45,5 @@ jobs:
         - name: Check main branch
           uses: debuide/merge-guard@c274b507625a09c82dd4e10a24b1e56fa224abb4
           with:
-            silent: true
+            silent: false
           #   github-token: ${{ secrets.GITHUB_TOKEN }}
